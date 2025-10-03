@@ -7,26 +7,30 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Cadastrar Paciente</h1>
+    <h1>Cadastrar Consulta</h1>
     <div class="container">
-        <form action="insert.php">
-            <div class="col-4">
+        <form action="insertC.php">
+            <div class="col-2">
                 <label for="">Nome:</label>
                 <input type="text" class="form-control" name="nome">
             </div>
+
+          <div class="col-2">
+                <label for="">Modalidade:</label>
+                <input type="text" class="form-control" name="modalidade">
+            </div>
+
             <div class="row">
                 <div class="col-1">
-                    <label for="">cpf:</label>
-                    <input type="number" class="form-control" name="cpf">
+                    <label for="">Especialidade:</label>
+                    <input type="text" class="form-control" name="especialidade">
                 </div>
-                <div class="col-1">
-                    <label for="">telefone:</label>
-                    <input type="number" class="form-control" name="telefone">
-                </div>
-                <div class="col-1">
-                    <label for="">consultório:</label>
-                    <input type="number" class="form-control" name="consultorio">
-                </div>
+
+            <div class="col-1">
+                    <label for="">objetivo:</label>
+                    <input type="text" class="form-control" name="obj">
+                </div>    
+
             </div>
             <button type="submit" class="btn btn-primary m-2">Cadastrar</button>
         </form>

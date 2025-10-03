@@ -1,7 +1,7 @@
 <?php 
 
     include('conexao.php');
-    $select = 'SELECT * FROM cadastro';
+    $select = 'SELECT * FROM cadastrom';
     $resultado = $conexao->query($select);
     
 ?>
@@ -14,32 +14,30 @@
     <title>Listar</title>
 </head>
 <body>
-    <h1>Lista de Pacientes</h1>
+    <h1>Lista de Médicos</h1>
     <table class="table table-striped" border="1">
         <thead>
             <th>nome</th>
             <th>cpf</th>
-            <th>telefone</th>
-            <th>consultorio</th>
+            <th>consultório</th>
             <th>Ação</th>
         </thead>
         <tbody>
             <?php 
                 if ($resultado->num_rows > 0) {
-                     while($paciente = $resultado->fetch_object()) {
+                     while($medico = $resultado->fetch_object()) {
                         echo "<tr>
-                            <td>$paciente->nome</td>
-                            <td>$paciente->cpf</td>
-                            <td>$paciente->telefone</td>
-                            <td>$paciente->consultorio</td>
+                            <td>$medico->nome</td>
+                            <td>$medico->cpf</td>
+                            <td>$medico->consultorio</td>
                             <td>
-                            <a href='delete.php?cpf=$paciente->cpf'>Excluir</a>
+                            <a href='delete.php?cpf=$medico->cpf'>Excluir</a>
                             </td>
                         </tr>";
                      }
                 } else {
                     echo "<tr>
-                    <td>Nenhum Paciente cadastrado</td>
+                    <td>Nenhum Médico cadastrado</td>
                     </tr>";
                 }  
             ?>

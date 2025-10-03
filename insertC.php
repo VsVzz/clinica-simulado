@@ -3,17 +3,23 @@
     include('conexao.php');
 
     $nome = $_GET['nome'];
-    $cpf = $_GET['cpf'];
+    $modalidade = $_GET['modalidade'];
     $consultorio = $_GET['consultorio'];
+    $especialidade = $_GET['especialidade'];
+    $obj = $_GET['objetivo'];
 
     echo "<h1>Médicos</h1>";
     echo $nome;
     echo "<br>";
-    echo $cpf;
+    echo $modalidade;
     echo "<br>";
     echo $consultorio;
+    echo "<br>";
+    echo $especialidade;
+    echo "<br>";
+    echo $obj;
 
-    $insert = "INSERT INTO cadastrom VALUES('$nome','$cpf','$consultorio')";
+    $insert = "INSERT INTO cadastroc VALUES('$nome','$cpf','$consultorio')";
 
     $conexao->query($insert);
 
